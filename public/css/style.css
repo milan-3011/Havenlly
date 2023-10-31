@@ -1,0 +1,275 @@
+*{
+    font-family: 'Comfortaa', cursive;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black !important;
+    color: white !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    flex: 1;
+}
+.navbar{
+    background-color: rgb(1, 1, 75) !important;
+    padding: 10px;
+}
+.container-fluid a{
+    text-decoration: none;
+    color: white !important;
+}
+.container-fluid a:hover{
+    color: white;
+}
+.navbar-brand{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbar-brand i{
+    padding-right: 10px !important;
+}
+.navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 100px ;
+}
+.navbar-nav a{
+    padding-left: 20px !important;
+    transition: all 0.2s ease-in-out;
+}
+.navbar-nav a:hover{
+    transform: scale(1.1);
+    color: white;
+}
+.search-box{
+    margin-right: 100px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: white;
+    height: 40px;
+}
+.search-input{
+    border-radius: 50px !important;
+    width: 250px !important;
+    border: none !important;
+}
+.search-input:focus{
+    border: none !important;
+    box-shadow: none !important;
+}
+.search-btn{
+    border: none !important;
+    border-radius: 50px !important;
+    color: rgb(1, 1, 75) !important;
+    font-size: larger !important;
+}
+.search-btn:hover{
+    background-color: rgb(1, 1, 75) !important;
+    color: white !important;
+}
+.search-btn:focus{
+    border: none !important;
+    box-shadow: none !important;
+}
+input.search-input::-webkit-search-cancel-button {
+    display: none;
+}
+
+/* @footer */
+
+footer{
+    background-color: rgb(1, 1, 75) !important;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text{
+    padding-top: 10px;
+}
+.social-icons a{
+    padding: 10px;
+    opacity: 0.6;
+}
+.social-icons a:hover{
+    opacity: 1;
+}
+.t-p a{
+    opacity: 0.7;
+    text-decoration: none;
+    color: white !important;
+    font-size: small;
+}
+.t-p a:hover{
+    opacity: 1;
+    columns: white;
+    text-decoration: underline;
+}
+
+/* @ index route */
+.card-img-top{
+    height: 300px;
+    border-radius: 15px !important;
+}
+.index-card{
+    background-color: transparent !important;
+    cursor: pointer;
+    margin: 10px auto;
+    transition: all 0.2s ease-in-out;
+}
+.index-card:hover{
+    transform: scale(1.1);
+}
+.card-row a{
+    text-decoration: none;
+    color: white !important;
+    width: fit-content;
+    margin: auto;
+}
+
+
+/* @ New route */
+.new-form{
+    margin: 10px auto;
+    border: 2px solid rgb(1, 1, 129) !important;
+    padding: 20px;
+    outline: 1px solid red;
+}
+.new-form .label{
+    align-items: flex-start;
+}
+.registration{
+    text-align: center;
+}
+.area-place{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* @ show route */
+.show-cover{
+    margin-top: 30px !important;
+}
+.show-img{
+    border-radius: 20px;
+    height: 300px;
+}
+
+.show-btn{
+    height: 40px;
+    background-color: rgb(1, 1, 129);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    padding: 0 30px;
+}
+.show-btn:hover{
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+.both-btns {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+
+
+/* @ review  stars styling */
+
+.rate{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
+.rate label{
+    font-size: 50px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: gray;
+    transition: color 0.3s;
+}
+.rate input{
+    display: none;
+}
+
+.rate input:checked ~ label,
+.rate input:checked ~ label + label {
+    color: yellow;
+}
+
+.rate label:hover,
+.rate input:checked ~ label:hover,
+.rate label:hover ~ label {
+    color: yellow;
+}
+
+.review-h4{
+    display: flex;
+    justify-content: center;
+}
+.review-card{
+    background-color: rgb(37, 37, 37) !important;
+    color: white !important;
+    margin: 20px 50px 20px 50px !important;
+}
+
+.main-review-submit{
+    margin: 10px 200px 20px 200px;
+}
+
+.dlt-review-btn{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    opacity: 0.5;
+}
+.dlt-review-btn:hover{
+    opacity: 1;
+}
+
+
+/* @login page  */
+.all-btn{
+    width: 20% !important;
+    height: 40px;
+    background-color: rgb(1, 1, 129);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    margin: 0 40%;
+}
+.all-btn:hover{
+    border-radius: 5px;
+    transform: scale(1.1);
+}
+
+.login-to-signUp{
+    text-align: center;
+}
+.login-to-signUp a{
+    color: skyblue;
+    font-weight: bolder;
+}
+.login-to-signUp a:hover{
+    color: skyblue;
+    text-decoration: underline !important;
+}
+
+
+/* @ maps */
+
+#map { 
+    width: 700px;
+    height: 400px;
+    margin: 20px;
+}

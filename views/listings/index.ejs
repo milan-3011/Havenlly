@@ -1,0 +1,162 @@
+<% layout("/layouts/boilerplate.ejs") %> 
+<style>
+    .all-icons{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .icons-name{
+        margin-right: 42px;
+        text-align: center;
+        font-size: small;
+        margin-bottom: 0 !important;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: all 0.2s ease-in-out;
+    }
+    .icons-name:hover{
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    .icons-name.active{
+        opacity: 1;
+        transform: scale(1.1);
+        text-decoration: underline;
+    }
+    .new-icons{
+        margin-top: 30px;
+    }
+    .taxes{
+        display: flex;
+        justify-content: center;
+        border: 1px solid gray;
+        height: fit-content;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    .form-switch{
+        display: flex;
+        justify-content: center;
+        align-items: center !important;
+    }
+    .form-check-input:checked {
+        background-color: rgb(1, 1, 129); 
+        border-color: white;
+        color: white; 
+        width: 40px;
+        height: 20px;
+        padding: 10px;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-6 -6 12 12'%3e%3ccircle r='4' fill='rgb(1, 1, 129)' stroke='white' stroke-width='2'/%3e%3c/svg%3e") !important;
+    }
+    .form-check-input{
+        background-color: white; 
+        border: 1px solid rgb(1, 1, 129);
+        width: 40px !important;
+        height: 20px;
+        margin: 0 10px;
+        padding: 10px;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-6 -6 12 12'%3e%3ccircle r='4' fill='transparent' stroke='rgb(1, 1, 129)' stroke-width='3'/%3e%3c/svg%3e") !important;
+    }
+    .tax-prcnt{
+        display: none;
+    }
+    .tax-prcnt.active {
+    display: inline;
+    }
+    .listing-categories{
+        display: none;
+    }
+    .noSearch{
+        display: none;
+        text-align: center;
+    }
+    .noSearch img{
+        width: 350px;
+    }
+    .noSearch.active{
+        display: inline;
+    }
+</style>
+<div class="container-fluid">
+    <div class="row new-icons">
+        <div class="col-10 all-icons" >
+            <div class="icons-name" data-category="Amazing pools">
+                <a href="#"><i class="fa-sharp fa-regular fa-water-ladder fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">Amazing pools</p>
+            </div>
+            <div class="icons-name"data-category="Farms">
+                <a href="#"><i class="fa-regular fa-farm fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">Farms</p>
+            </div>
+            <div class="icons-name" data-category="Windmills">
+                <a href="#"><i class="fa-solid fa-wind-turbine fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">Windmills</p>
+            </div>
+            <div class="icons-name" data-category="Tropical">
+                <a href="#"><i class="fa-light fa-island-tropical fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">Tropical</p>
+            </div>
+            <div class="icons-name" data-category="Trending">
+                <a href="#"><i class="fa-sharp fa-regular fa-fire fa-flip-horizontal fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">Trending</p>
+            </div>
+            <div class="icons-name" data-category="Arctic">
+                <a href="#"><i class="fa-light fa-snowflake fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">Arctic</p>
+            </div>
+            <div class="icons-name" data-category="Play">
+                <a href="#"><i class="fa-light fa-bowling-ball-pin fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">Play</p>
+            </div>
+            <div class="icons-name" data-category="Boat">
+                <a href="#"><i class="fa-light fa-sailboat fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">Boat</p>
+            </div>
+            <div class="icons-name" data-category="Desert">
+                <a href="#"><i class="fa-light fa-cactus fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">Desert</p>
+            </div>
+            <div class="icons-name" data-category="Mountain city">
+                <a href="#"><i class="fa-light fa-mountain-city fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">Mountain city</p>
+            </div>
+            <div class="icons-name" data-category="City">
+                <a href="#"><i class="fa-light fa-tree-city fa-2xl" style="color: #ffffff;"></i></a>
+                <p style="margin-top: 10px;">City</p>
+            </div>
+            
+        </div>
+        <div class="col-2 taxes">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label" for="flexSwitchCheckDefault">With taxes</label>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row  card-row">
+    <% for(let listing of allListings) { %>
+        <a href="/listings/<%= listing.id %>">
+            <div class="card index-card" style="width: 22rem;">
+                <img src="<%= listing.image.url %>" class="card-img-top" alt="image">
+                <div class="card-body">
+                    <p class="card-text"><%= listing.title %> <br>
+                        <% if (listing.price) { %>
+                            &#8377 <%= listing.price.toLocaleString("en-IN") %>
+                        <% } %>
+                        <i class="tax-prcnt">+ 18% Tax</i> 
+                        <br>
+                        <span class="listing-categories">Category: <%= listing.category %></span>
+                    </p>
+                </div>
+            </div>
+        </a>
+    <% } %>
+    <div class="noSearch">
+        <img src="https://res.cloudinary.com/duo7wvsmv/image/upload/v1698723492/WonderLust_DEV/noResult_sbxtlh.png" alt="Image">
+        <h3>Sorry! No result found...</h3>
+        <p style="color: gray;">We're sorry what you were looking for. <br> Please try another way</p>
+    </div>
+</div>
+

@@ -1,0 +1,66 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+    <form action="/listings" method="post" class="col-6 offset-3 new-form needs-validation" novalidate enctype="multipart/form-data">
+        <h2 class="registration">Registration Form</h2>
+        <br>
+        <label for="title" class="form-lable">Place Name</label>
+        <input type="text" name="listing[title]" placeholder="Title" class="form-control" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please provide a valid title.
+        </div>
+        <br>
+        <label for="decription" class="form-lable">Description</label>
+        <textarea name="listing[description]" cols="20" rows="3" class="form-control" placeholder="Enter description" required></textarea>
+        <div class="invalid-feedback">
+            Please provide a valid description.
+        </div>  
+        <br>
+        <label for="image" class="form-lable">Image</label>
+        <input type="file" name="listing[image]" class="form-control" required>
+        <br>
+        <label for="category" class="form-lable">Select a category:</label>
+        <select id="category" name="listing[category]" class="form-control form-select" aria-label="Default select example">
+            <option value="Amazing pools">Select a category</option>
+            <option value="Amazing pools">Amazing pools</option>
+            <option value="Farms">Farms</option>
+            <option value="Windmills">Windmills</option>
+            <option value="Tropical">Tropical</option>
+            <option value="Trending">Trending</option>
+            <option value="Arctic">Arctic</option>
+            <option value="Play">Play</option>
+            <option value="Boat">Boat</option>
+            <option value="Desert">Desert</option>
+            <option value="Mountain city">Mountain city</option>
+            <option value="City">City</option>
+        </select>
+        <br>
+        <div class="area-place">
+            <div class="col-md-5">
+                <label for="location" class="form-lable">Location</label>
+                <input type="text" class="form-control" name="listing[location]" placeholder="Location" required>
+                <div class="invalid-feedback">
+                    Please provide a valid location.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="country" class="form-lable">Country</label>
+                <input type="text" class="form-control" name="listing[country]" placeholder="Country" required>
+                <div class="invalid-feedback">
+                    Please provide a valid Contry.
+                </div>
+            </div>
+        </div>
+        <br>
+        <label for="price" class="form-lable">Price</label>
+        <input type="number" class="form-control" name="listing[price]" placeholder="Price" required>
+        <div class="invalid-feedback">
+            Please provide a valid price.
+        </div>
+        <br>
+        <button class="all-btn">Registration</button>
+    </form>
+
+</body>

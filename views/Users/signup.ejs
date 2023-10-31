@@ -1,0 +1,25 @@
+<% layout("/layouts/boilerplate.ejs") %>
+
+<body>
+    <form action="/signup" method="post" class="col-6 offset-3 new-form needs-validation" novalidate>
+        <h2 class="registration sign-up">Sign-Up</h2>
+        <br>
+        <label for="email" class="form-lable">Email Id:</label>
+        <input type="text" name="email" placeholder="email" class="form-control" required>
+        <div class="invalid-feedback">
+            Please provide an email Id.
+        </div>
+        <br>
+        <label for="username" class="form-lable">Username:</label>
+        <input type="text" name="username" placeholder="Username" class="form-control" required>
+        <div class="invalid-feedback">
+            Please provide an Username.
+        </div>
+        <br>
+        <label for="password" class="form-lable">Password:</label>
+        <input type="password" name="password" class="form-control" required>
+        <br>
+        <button class="all-btn">Sign-Up</button>
+    </form>
+
+</body>

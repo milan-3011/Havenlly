@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md sticky-top navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand col-2" href="/listings"><i class="fa-brands fa-pagelines fa-xl" style="color: #ffffff;"></i> HavenllY</a>
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <form class="d-flex search-box" id="search-form">
+            <input class="form-control me-2 search-input" id="search-input" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success search-btn" type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
+          </form>
+          <a class="nav-link" href="/listings/new">Join</a>
+          <% if(!currUser){ %>
+          <a class="nav-link" href="/signup">Sign-Up</a>
+          <a class="nav-link" href="/login">Login</a>
+          <% } %>
+          <% if(currUser){ %>
+          <a class="nav-link" href="/logout">Log Out</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>

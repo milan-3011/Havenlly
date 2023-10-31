@@ -1,0 +1,52 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+    <form action="/listings/<%= listing._id%>?_method=PUT" method="post" class="col-6 offset-3 new-form needs-validation" novalidate enctype="multipart/form-data">
+        <h2 class="registration">Update Place</h2>
+        <br>
+        <label for="title" class="form-lable">Place Name</label>
+        <input type="text" name="listing[title]" class="form-control" value="<%= listing.title %>" required>
+        <br>
+        <label for="decription" class="form-lable">Description</label>
+        <textarea name="listing[description]" class="form-control" cols="20" rows="3" required><%= listing.description %></textarea>
+        <br>
+        <div >
+            <h6>Original Listing Image</h6>
+            <img style="width:250px; height: 150px;"  src="<%= originalImageUrl %>">
+        </div>
+        <br>
+        <label for="image" class="form-lable">Upload New Image</label>
+        <input type="file" name="listing[image]" value="<%= listing.image %>" class="form-control">
+        <br>
+        <label for="category" class="form-lable">Select a category:</label>
+        <select id="category" name="listing[category]" class="form-control form-select" aria-label="Default select example">
+            <option value="Amazing pools" <%= listing.category === "Amazing pools" ? 'selected' : '' %>>Amazing pools</option>
+            <option value="Farms" <%= listing.category === "Farms" ? 'selected' : '' %>>Farms</option>
+            <option value="Windmills" <%= listing.category === "Windmills" ? 'selected' : '' %>>Windmills</option>
+            <option value="Tropical" <%= listing.category === "Tropical" ? 'selected' : '' %>>Tropical</option>
+            <option value="Trending" <%= listing.category === "Trending" ? 'selected' : '' %>>Trending</option>
+            <option value="Arctic" <%= listing.category === "Arctic" ? 'selected' : '' %>>Arctic</option>
+            <option value="Play" <%= listing.category === "Play" ? 'selected' : '' %>>Play</option>
+            <option value="Boat" <%= listing.category === "Boat" ? 'selected' : '' %>>Boat</option>
+            <option value="Desert" <%= listing.category === "Desert" ? 'selected' : '' %>>Desert</option>
+            <option value="Mountain city" <%= listing.category === "Mountain city" ? 'selected' : '' %>>Mountain city</option>
+            <option value="City" <%= listing.category === "City" ? 'selected' : '' %>>City</option>
+        </select>
+        
+        <br>
+        <div class="area-place">
+            <div class="col-md-5">
+                <label for="location" class="form-lable">Location</label>
+                <input type="text" class="form-control" name="listing[location]" value="<%= listing.location %>" required>
+            </div>
+            <div class="col-md-6">
+                <label for="country" class="form-lable">Country</label>
+                <input type="text" class="form-control" name="listing[country]" value="<%= listing.country %>" required>    
+            </div>
+        </div>
+        <br>
+        <label for="price" class="form-lable">Price ( &#8377 )</label>
+        <input type="number" class="form-control" name="listing[price]" value="<%= listing.price %>" required>
+        <br>
+        <button class="all-btn">Update</button>
+    </form>
+</body>
