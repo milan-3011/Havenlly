@@ -19,7 +19,6 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const Listing = require("./models/listing.js");
-const mapboxgl = require('mapbox-gl');
 
 const dbUrl = process.env.ATLASDB_URL;
 
