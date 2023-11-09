@@ -1,7 +1,7 @@
 const User = require("../models/user.js");
 
 module.exports.renderSignUp = (req, res)=>{
-    res.render("Users/signUp.ejs");
+    res.render("/Users/signUp.ejs");
 }
 
 module.exports.signUp = async (req, res)=>{
