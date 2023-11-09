@@ -1,0 +1,237 @@
+@media (max-width: 767px) {
+    .navbar-brand{
+        margin-left: 50px;
+        font-size: medium !important;
+    }
+    .navbar-toggler-icon{
+        height: 30px !important;
+    }
+    .navbar{
+        padding: 3px !important;
+    }
+    .search-box{
+        margin: 20px auto;
+        width: 300px;
+    }
+    .navbar-nav{
+        text-align: center;
+        padding: 0;
+        flex-direction: column;
+    }
+    .nav-link{
+        padding-left: 0px !important;
+    }
+
+    /* @ index.ejs */
+    .all-icons{
+        padding-top: 10px;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        flex-wrap: initial !important;
+        justify-content: flex-start !important;
+        margin: auto;
+    }
+    .icons-name{
+        margin: 0 10px !important;
+        font-size: 10px !important;
+    }
+    .new-icons{
+        margin-top: 10px !important;
+        display: block !important;
+    }
+    .form-check-label{
+        font-size: 10px;
+    }
+    .icons-arrow{
+        align-items: center;
+        width: 100% !important;
+    }
+    .scroll-arrow{
+        display: block !important;
+        margin: 0 5px;
+    }
+    .scroll-arrow:active{
+        opacity: 0.7;
+    }
+    .taxes{
+        width: 130px !important;
+        padding: 5px !important;
+        margin: 5px auto !important;
+        margin-right: 10px !important; 
+    }
+    .index-card:hover{
+        transform: scale(1.0);
+    }
+
+    /* @ show  */
+    #map { 
+        width: 300px !important;
+        height: 300px !important;
+        margin: 20px auto;
+        border-radius: 20px;
+    }
+    .offset-2{
+        margin-left: 0px !important;
+    }
+    .col-8{
+        width: auto !important;
+    }
+    .main-review-submit{
+        margin: 10px !important;
+    }
+    .review-btn{
+        width: 30% !important;
+        margin: 5% 35% !important;
+    }
+    /* @ login */
+
+    .offset-3{
+        margin-left: 0px !important;
+    }
+    .col-6{
+        width: 100% !important;
+    }
+    .login-btn{
+        width: 30% !important;
+        margin: 0 35% auto !important;
+    }
+    .alert{
+        margin: 0px !important;
+        margin-top: 10px !important;
+        padding: 10px !important;
+        align-items: center !important;
+        font-size: small !important;
+    }
+    .btn-close{
+        top: auto !important;
+        font-size: 10px;
+    }
+    .flex-shrink-0{
+        width: 15px !important;
+        height: auto !important;
+    }
+    /* @ new / creat  */
+    .register-btn{
+        width: 36% !important;
+        margin: 0 32% !important;
+    }
+    .location{
+        margin-right: 5px !important;
+    }
+    .country{
+        margin-left: 5px !important;
+    }
+    /* @ edit  */
+
+    .update-btn{
+        width: 30% !important;
+        margin: 0 35% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1080px) {
+    .navbar-nav{
+        padding-right: 0px;
+    }
+    .navbar-nav a{
+        font-size: small;
+    }
+    .all-icons{
+        padding-top: 10px;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        flex-wrap: initial !important;
+        justify-content: flex-start !important;
+        margin: auto;
+    }
+    .icons-name{
+        margin: 0 20px !important;
+        font-size: 10px !important;
+    }
+    .new-icons{
+        margin-top: 10px !important;
+        display: block !important;
+    }
+    .form-check-label{
+        font-size: 10px;
+    }
+    .icons-arrow{
+        align-items: center;
+        width: 100% !important;
+    }
+    .scroll-arrow{
+        display: block !important;
+        margin: 0 5px;
+    }
+    .taxes{
+        width: 130px !important;
+        padding: 5px !important;
+        margin: 5px auto !important;
+        margin-right: 10px !important; 
+    }
+    #map { 
+        width: 400px !important;
+        height: 400px !important;
+        margin: 30px auto;
+    }
+    .offset-2{
+        margin-left: 0px !important;
+    }
+    .offset-3{
+        margin-left: 0px !important;
+    }
+    .col-6{
+        width: 100% !important;
+    }
+    .col-8{
+        width: auto !important;
+    }
+    .review-btn{
+        width: 30% !important;
+        margin: 5% 35% !important;
+    }
+
+}
+
+@media (max-width: 300px){
+    .search-box{
+        width: 250px ;
+        margin: 10px auto;
+    }
+    .search-input{
+        width: 200px !important;
+    }
+    .index-card{
+        width: 250px !important;
+    }
+    .card-img-top{
+        height: 250px !important;
+    }
+    #map { 
+        width: 250px !important;
+        height: 250px !important;
+        margin: 10px auto;
+    }
+    .login-btn{
+        font-size: 10px;
+        height: 30px;
+    }
+    .register-btn{
+        font-size: 10px;
+    }
+    .new-form h2{
+        font-size: medium;
+    }
+
+}
+
+@media (min-width: 1081px) and (max-width: 1300px) {
+    .icons-name{
+        margin: 0 14px !important;
+    }
+    .register-btn{
+        width: 36% !important;
+        margin: 0 32% !important;
+    }
+    
+}

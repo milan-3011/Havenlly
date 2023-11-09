@@ -35,17 +35,20 @@ body{
 .navbar-nav{
     display: flex;
     justify-content: flex-end;
-    width: 100%;
+    width: 100% ;
     padding-right: 100px ;
 }
-.navbar-nav a{
-    padding-left: 20px !important;
-    transition: all 0.2s ease-in-out;
+@media (min-width: 1000px){
+    .navbar-nav a{
+        padding-left: 20px !important;
+        transition: all 0.2s ease-in-out;
+    }
+    .navbar-nav a:hover{
+        transform: scale(1.1);
+        color: white;
+    }
 }
-.navbar-nav a:hover{
-    transform: scale(1.1);
-    color: white;
-}
+
 .search-box{
     margin-right: 100px;
     border: 1px solid white;
@@ -125,6 +128,7 @@ footer{
 .index-card:hover{
     transform: scale(1.1);
 }
+
 .card-row a{
     text-decoration: none;
     color: white !important;
@@ -154,6 +158,7 @@ footer{
 /* @ show route */
 .show-cover{
     margin-top: 30px !important;
+    
 }
 .show-img{
     border-radius: 20px;

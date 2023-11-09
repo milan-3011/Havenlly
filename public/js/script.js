@@ -134,3 +134,29 @@ searchForm.addEventListener('submit', function (event) {
     event.preventDefault();
     filterListings();
 });
+
+
+// @ index icons scrolling
+const rightBtn = document.querySelector('#right-button');
+const leftBtn = document.querySelector('#left-button');
+
+rightBtn.addEventListener("click", function(event) {
+    const conent = document.querySelector('.all-icons');
+    conent.scrollBy({
+        top: 0,
+        left: +200,
+        behavior: 'smooth'
+    });
+    event.preventDefault();
+});
+
+leftBtn.addEventListener("click", function(event) {
+    const conent = document.querySelector('.all-icons');
+    conent.scrollBy({
+        top: 0,
+        left: -200,
+        behavior: 'smooth'
+    });
+    event.preventDefault();
+});
+

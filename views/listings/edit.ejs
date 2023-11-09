@@ -34,11 +34,11 @@
         
         <br>
         <div class="area-place">
-            <div class="col-md-5">
+            <div class="col-md-5 location">
                 <label for="location" class="form-lable">Location</label>
                 <input type="text" class="form-control" name="listing[location]" value="<%= listing.location %>" required>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 country">
                 <label for="country" class="form-lable">Country</label>
                 <input type="text" class="form-control" name="listing[country]" value="<%= listing.country %>" required>    
             </div>
@@ -47,6 +47,6 @@
         <label for="price" class="form-lable">Price ( &#8377 )</label>
         <input type="number" class="form-control" name="listing[price]" value="<%= listing.price %>" required>
         <br>
-        <button class="all-btn">Update</button>
+        <button class="all-btn update-btn">Update</button>
     </form>
 </body>

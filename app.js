@@ -54,7 +54,7 @@ const sessionOption = {
   resave: false,
   saveUninitialized : true,
   cookie: {
-    expire: Date.now() + 7*24*60*60*1000,
+    expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
     maxAge : 7*24*60*60*1000,
     httpOnly: true
   }
@@ -80,6 +80,14 @@ app.use ((req, res, next)=>{
 app.get('/',  async(req, res) => {
   const allListings = await Listing.find({});
   res.render("listings/index.ejs", {allListings});
+});
+
+app.get("/terms", (req, res) =>{
+  res.render("terms-privacy/terms.ejs")
+});
+
+app.get("/privacy", (req, res) =>{
+  res.render("terms-privacy/privacy.ejs")
 });
 
 app.use("/listings", listingRoute);

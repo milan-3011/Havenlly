@@ -3,10 +3,9 @@
     .all-icons{
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
     }
     .icons-name{
-        margin-right: 42px;
+        margin: 0 19px;
         text-align: center;
         font-size: small;
         margin-bottom: 0 !important;
@@ -25,6 +24,7 @@
     }
     .new-icons{
         margin-top: 30px;
+        display: flex;
     }
     .taxes{
         display: flex;
@@ -61,7 +61,7 @@
         display: none;
     }
     .tax-prcnt.active {
-    display: inline;
+        display: inline;
     }
     .listing-categories{
         display: none;
@@ -76,56 +76,68 @@
     .noSearch.active{
         display: inline;
     }
+    .icons-arrow{
+        display: flex;
+        align-items: center;
+    }
+    .scroll-arrow{
+        display: none;
+    }
 </style>
 <div class="container-fluid">
     <div class="row new-icons">
-        <div class="col-10 all-icons" >
-            <div class="icons-name" data-category="Amazing pools">
-                <a href="#"><i class="fa-sharp fa-regular fa-water-ladder fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">Amazing pools</p>
+
+        <div class="col-10 icons-arrow">
+            <div class="scroll-arrow left-arrow" id="left-button"><i class="fa-regular fa-arrow-right fa-rotate-180" style="color: #ffffff;"></i></div>
+            <div class=" all-icons" >
+                <div class="icons-name" data-category="Amazing pools">
+                    <a href="#"><i class="fa-sharp fa-regular fa-water-ladder fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">Amazing pools</p>
+                </div>
+                <div class="icons-name"data-category="Farms">
+                    <a href="#"><i class="fa-regular fa-farm fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">Farms</p>
+                </div>
+                <div class="icons-name" data-category="Windmills">
+                    <a href="#"><i class="fa-solid fa-wind-turbine fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">Windmills</p>
+                </div>
+                <div class="icons-name" data-category="Tropical">
+                    <a href="#"><i class="fa-light fa-island-tropical fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">Tropical</p>
+                </div>
+                <div class="icons-name" data-category="Trending">
+                    <a href="#"><i class="fa-sharp fa-regular fa-fire fa-flip-horizontal fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">Trending</p>
+                </div>
+                <div class="icons-name" data-category="Arctic">
+                    <a href="#"><i class="fa-light fa-snowflake fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">Arctic</p>
+                </div>
+                <div class="icons-name" data-category="Play">
+                    <a href="#"><i class="fa-light fa-bowling-ball-pin fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">Play</p>
+                </div>
+                <div class="icons-name" data-category="Boat">
+                    <a href="#"><i class="fa-light fa-sailboat fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">Boat</p>
+                </div>
+                <div class="icons-name" data-category="Desert">
+                    <a href="#"><i class="fa-light fa-cactus fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">Desert</p>
+                </div>
+                <div class="icons-name" data-category="Mountain city">
+                    <a href="#"><i class="fa-light fa-mountain-city fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">Mountain city</p>
+                </div>
+                <div class="icons-name" data-category="City">
+                    <a href="#"><i class="fa-light fa-tree-city fa-2xl" style="color: #ffffff;"></i></a>
+                    <p style="margin-top: 10px;">City</p>
+                </div>
             </div>
-            <div class="icons-name"data-category="Farms">
-                <a href="#"><i class="fa-regular fa-farm fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">Farms</p>
-            </div>
-            <div class="icons-name" data-category="Windmills">
-                <a href="#"><i class="fa-solid fa-wind-turbine fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">Windmills</p>
-            </div>
-            <div class="icons-name" data-category="Tropical">
-                <a href="#"><i class="fa-light fa-island-tropical fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">Tropical</p>
-            </div>
-            <div class="icons-name" data-category="Trending">
-                <a href="#"><i class="fa-sharp fa-regular fa-fire fa-flip-horizontal fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">Trending</p>
-            </div>
-            <div class="icons-name" data-category="Arctic">
-                <a href="#"><i class="fa-light fa-snowflake fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">Arctic</p>
-            </div>
-            <div class="icons-name" data-category="Play">
-                <a href="#"><i class="fa-light fa-bowling-ball-pin fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">Play</p>
-            </div>
-            <div class="icons-name" data-category="Boat">
-                <a href="#"><i class="fa-light fa-sailboat fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">Boat</p>
-            </div>
-            <div class="icons-name" data-category="Desert">
-                <a href="#"><i class="fa-light fa-cactus fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">Desert</p>
-            </div>
-            <div class="icons-name" data-category="Mountain city">
-                <a href="#"><i class="fa-light fa-mountain-city fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">Mountain city</p>
-            </div>
-            <div class="icons-name" data-category="City">
-                <a href="#"><i class="fa-light fa-tree-city fa-2xl" style="color: #ffffff;"></i></a>
-                <p style="margin-top: 10px;">City</p>
-            </div>
-            
+            <div class="scroll-arrow right-arrow" id="right-button"><i class="fa-regular fa-arrow-right"  style="color: #ffffff;"></i></div>
         </div>
+
         <div class="col-2 taxes">
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
