@@ -42,10 +42,25 @@ body{
     .navbar-nav a{
         padding-left: 20px !important;
         transition: all 0.2s ease-in-out;
+        position: relative;
     }
     .navbar-nav a:hover{
-        transform: scale(1.1);
-        color: white;
+        color: #3498db !important;
+        font-weight: 800;
+    }
+    .navbar-nav a::after{
+        content: "";
+		position: absolute;
+		bottom: 2px;
+		height: 1.5px;
+		width: 0;
+		left: 55% !important;
+		background-color: white;
+        transition: width 0.3s ease-in-out;
+		transform: translateX(-50%);
+    }
+    .navbar-nav a:hover::after{
+        width: 90%; 
     }
 }
 
@@ -117,16 +132,25 @@ footer{
 /* @ index route */
 .card-img-top{
     height: 300px;
+    transition: transform 0.2s; 
+    opacity: 0.9;
+}
+.card-img{
+    overflow: hidden;
     border-radius: 15px !important;
 }
 .index-card{
     background-color: transparent !important;
     cursor: pointer;
     margin: 10px auto;
-    transition: all 0.2s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    transition: border-radius 0.2s;
 }
-.index-card:hover{
+
+.index-card:hover .card-img-top {
     transform: scale(1.1);
+    opacity: 1;
 }
 
 .card-row a{
@@ -135,7 +159,6 @@ footer{
     width: fit-content;
     margin: auto;
 }
-
 
 /* @ New route */
 .new-form{

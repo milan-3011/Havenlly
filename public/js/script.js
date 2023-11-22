@@ -50,8 +50,12 @@ let taxSwitch = document.getElementById("flexSwitchCheckDefault");
 
 taxSwitch.addEventListener("click", () => {
     let taxPrcnt = document.getElementsByClassName("tax-prcnt");
+    let realPrice = document.getElementsByClassName("real-price");
     for (let tax of taxPrcnt) {
         tax.classList.toggle("active");
+    }
+    for (let price of realPrice) {
+        price.classList.toggle("active");
     }
 });
 

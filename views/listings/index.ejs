@@ -63,6 +63,9 @@
     .tax-prcnt.active {
         display: inline;
     }
+    .real-price.active{
+        display: none;
+    }
     .listing-categories{
         display: none;
     }
@@ -151,13 +154,15 @@
     <% for(let listing of allListings) { %>
         <a href="/listings/<%= listing.id %>">
             <div class="card index-card" style="width: 22rem;">
-                <img src="<%= listing.image.url %>" class="card-img-top" alt="image">
+                <div class="card-img">
+                    <img src="<%= listing.image.url %>" class="card-img-top" alt="image">
+                </div>
                 <div class="card-body">
                     <p class="card-text"><%= listing.title %> <br>
                         <% if (listing.price) { %>
-                            &#8377 <%= listing.price.toLocaleString("en-IN") %>
+                            &#8377 <span class="real-price"><%= listing.price.toLocaleString("en-IN") %>/ night</span>
                         <% } %>
-                        <i class="tax-prcnt">+ 18% Tax</i> 
+                        <span class="tax-prcnt"><%= (listing.price + (listing.price*0.18)).toLocaleString("en-IN")%> total before taxes</span> 
                         <br>
                         <span class="listing-categories">Category: <%= listing.category %></span>
                     </p>
