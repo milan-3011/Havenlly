@@ -1,4 +1,4 @@
-# **Havenlly - Airbnb Clone Project**
+# **Havenlly**
 
 Explore the live version of Havenlly at [https://havenlly.onrender.com/](https://havenlly.onrender.com/).
 
