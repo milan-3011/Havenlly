@@ -1,5 +1,4 @@
 {
-  "type": "module",
   "engines": {
     "node": "18.17.1"
   },
@@ -19,6 +18,7 @@
     "connect-flash": "^0.1.1",
     "connect-mongo": "^5.1.0",
     "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
     "cors-anywhere": "^0.4.4",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
