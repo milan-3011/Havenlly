@@ -90,6 +90,12 @@ app.get("/privacy", (req, res) =>{
   res.render("terms-privacy/privacy.ejs")
 });
 
+app.get("/myjson", (req, res) => {
+  const jsonData = require("./views/myjson/features.json");
+  res.json(jsonData);
+});
+
+
 app.use("/listings", listingRoute);
 app.use("/listings/:id/reviews", reviewRoute);
 app.use("/", userRoute);

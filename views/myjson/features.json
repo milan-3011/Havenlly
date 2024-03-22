@@ -1,0 +1,17 @@
+{
+"list":[
+{
+"id": 1,
+"feature": "Show_Home_Page",
+"enabled": true,
+"androidVersion": "1.1.0",
+"iOSVersion": "1.1.0"
+},
+{
+"id": 2,
+"feature": "Show_Settings_Page",
+"enabled": true,
+"androidVersion": "1.2.0",
+"iOSVersion": "1.2.0"
+}
+]}

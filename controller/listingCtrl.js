@@ -45,7 +45,6 @@ module.exports.showListing = async(req,res) =>{
     res.render("listings/show.ejs",{listing});
 }
 
-
 // @ edit route
 module.exports.editListing = async(req, res, error) =>{
     let{id} = req.params;
