@@ -19,6 +19,8 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const Listing = require("./models/listing.js");
+const cors_proxy = require('cors-anywhere');
+const fetch = require("node-fetch"); 
 
 const dbUrl = process.env.ATLASDB_URL;
 
@@ -28,6 +30,17 @@ main().then(() => console.log("connected with db"))
 async function main() {
   await mongoose.connect(dbUrl);
 };
+
+// Set up cors-anywhere proxy server
+const host = process.env.HOST || '0.0.0.0';
+const port = process.env.PORT || 8081; // Use a different port than your main server
+
+cors_proxy.createServer({
+  originWhitelist: [], // Allow all origins
+}).listen(port, host, () => {
+  console.log(`CORS Anywhere server is running on ${host}:${port}`);
+});
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -95,6 +108,20 @@ app.get("/myjson", (req, res) => {
   res.json(jsonData);
 });
 
+app.get("/myjson", (req, res) => {
+  const proxyUrl = `http://${host}:${port}`;
+  const targetUrl = 'https://havenlly.onrender.com/myjson';
+  const proxyRequestUrl = `${proxyUrl}/${targetUrl}`;
+  
+  fetch(proxyRequestUrl) // Assuming you have 'fetch' available
+    .then(response => response.json())
+    .then(jsonData => res.json(jsonData))
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    });
+});
+
 
 app.use("/listings", listingRoute);
 app.use("/listings/:id/reviews", reviewRoute);
@@ -110,6 +137,7 @@ app.use((err, req, res, next)=>{
   let {statusCode = 500, message= "something went wrong"} = err;
   res.status(statusCode).render("error.ejs", {err});
 });
+
 
 app.listen(8080, () =>{
     console.log("port is listening on 8080");
