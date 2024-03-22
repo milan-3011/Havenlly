@@ -20,7 +20,7 @@ const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 const Listing = require("./models/listing.js");
 const cors_proxy = require('cors-anywhere');
-const fetch = require("node-fetch"); 
+import fetch from 'node-fetch';
 
 const dbUrl = process.env.ATLASDB_URL;
 
